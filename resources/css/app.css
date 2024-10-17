@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gaya Umum */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s ease-in-out; /* Animasi untuk body */
+}
+
+/* Gaya Navbar */
+.nav {
+    background-color: #1c1c1c; /* Warna hitam futuristik */
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk depth */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out; /* Animasi untuk navbar */
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff5757; /* Warna merah tidak mencolok saat hover */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Gaya Tombol Toggle Sidebar */
+#toggleSidebar {
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+#toggleSidebar:hover {
+    color: #ff5757; /* Warna merah pada hover */
+}
+
+/* Sidebar */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Sidebar disembunyikan awalnya */
+    height: 100%;
+    background-color: #1c1c1c; /* Warna hitam futuristik */
+    color: #fff;
+    transition: left 0.3s ease-in-out; /* Animasi masuk */
+    z-index: 999;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3); /* Bayangan di sisi kanan sidebar */
+}
+
+#sidebar.active {
+    left: 0; /* Sidebar muncul dari kiri */
+}
+
+#sidebar ul {
+    padding: 0;
+    margin-top: 60px; /* Jarak dari navbar */
+    list-style: none;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+}
+
+#sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #ff5757; /* Warna merah saat hover di sidebar */
+    padding-left: 20px; /* Efek animasi geser ke kanan saat hover */
+    transition: padding-left 0.3s ease;
+}
+
+/* Konten Utama */
+#content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out; /* Animasi untuk geser konten */
+}
+
+#content.active {
+    margin-left: 250px; /* Geser konten saat sidebar muncul */
+}
+
+/* Tombol dan Animasi */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5757;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e04a4a; /* Warna merah sedikit lebih terang */
+    transform: scale(1.05); /* Animasi kecil saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animasi dan Efek Halus */
+body.shift-left {
+    transform: translateX(250px); /* Geser body saat sidebar aktif */
+}
+
+nav.shift-left {
+    transform: translateX(250px); /* Geser navbar saat sidebar aktif */
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Efek Hover pada Teks */
+h1:hover {
+    color: #ff5757; /* Efek hover merah pada judul */
+    transition: color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #ff5757;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e04a4a; /* Sedikit lebih terang saat hover */
+}
